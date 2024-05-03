@@ -18,6 +18,18 @@ h2 {
     margin: 0 auto;
     padding: 3rem;
 }
+#bgbtn {
+    background-color: #AEC0DA;
+    width: 439px;
+    height: 77px;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    font-family: "Rozha One";
+}
+#bgbtn:hover {
+    background-color: #8AACDC;
+}
 .displayArea {
     flex: 5.6;
     margin: 0 auto;
