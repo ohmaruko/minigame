@@ -4,8 +4,8 @@ const moveImageWithCursor = (e) => {
   const mouseX = e.clientX;
   const mouseY = e.clientY;
 
-  const offsetX = 20; 
-  const offsetY = 20; 
+  const offsetX = 20;
+  const offsetY = 20;
 
   const newImageX = mouseX + offsetX;
   const newImageY = mouseY + offsetY;
@@ -15,3 +15,10 @@ const moveImageWithCursor = (e) => {
 };
 
 window.addEventListener('mousemove', moveImageWithCursor);
+
+window.addEventListener('scroll', () => {
+  moveImageWithCursor({
+    clientX: event.clientX,
+    clientY: event.clientY
+  });
+});

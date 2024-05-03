@@ -37,7 +37,7 @@ h2 {
 }
 
 .cursor {
-    position: absolute;
+    position: fixed;
     width: 30px;
     height: 30px;
   }
