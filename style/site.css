@@ -21,7 +21,10 @@ h1{
     font-family: 'Rozha One', serif;
 
 }
-
+.startButton a {
+    text-decoration: none;
+    color: black;
+}
 .text {
     display: flex;
     flex-direction: column;
