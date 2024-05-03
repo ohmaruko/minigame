@@ -1,5 +1,7 @@
 body {
     font-family: "Rozha One";
+    min-height: 100vh;
+    margin: 0;
 }
 h1 {
     font-size: 48px;
