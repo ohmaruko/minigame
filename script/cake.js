@@ -6,3 +6,13 @@ function changeBgColor() {
     let selectedColor = colors[Math.floor(Math.random() * colors.length - 1)];
     document.getElementById("background").style.backgroundColor = selectedColor;
 }
+
+// back button 
+document.addEventListener('DOMContentLoaded', () => {
+    const backButton = document.querySelector('.back');
+
+    backButton.addEventListener('click', () => {
+        // Navigate back to the previous page
+        window.history.back();
+    });
+});

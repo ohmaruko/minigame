@@ -3,6 +3,39 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+
+.back {
+    background-color: #F5F1CC;
+    border-radius: 100px;
+    border: 2px solid #D19E61;
+    width: 61px;
+    height: 61px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back svg {
+    fill: #D19E61
+}
+
+.back:hover {
+    background-color: #D19E61;
+}
+
+.back svg:hover {
+    fill: #F5F1CC
+}
+
+.back:active {
+    background-color: #5F4C08;
+}
+
+.back svg:active {
+    fill: #F5F1CC;
+}
+
+
 h1 {
     font-size: 48px;
 }
