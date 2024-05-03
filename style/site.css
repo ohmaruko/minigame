@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F5D2CC;
+    cursor: url('../images/cream_white.svg'), auto;
+}
+
 .content {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 113px;
 }
 
 h1{
@@ -19,15 +29,32 @@ h1{
     padding: 1rem 5rem;
     font-size: 40px;
     font-family: 'Rozha One', serif;
-
+    color: #5F4C08;
 }
 .startButton a {
     text-decoration: none;
-    color: black;
 }
+
+.startButton:hover {
+    background-color: #D19E61;
+    color: #F5F1CC;
+}
+
+.startButton:active {
+    background-color: #5F4C08;
+    color: #F5F1CC;
+}
+
 .text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.cursor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+  }
+  
