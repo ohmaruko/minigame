@@ -31,15 +31,30 @@
                 <h2>Choose your: </h2>
                 <div>
                     <p>Layer</p>
-                    <div></div>
+                    <div>
+                        <!-- 3 layer thumbnails/buttons go here -->
+                         <button class="layerBtn" data-layer="vanilla"><img src="./images/layer_vanilla.svg" alt="Vanilla Layer"        width="70px" height="70px"></button>
+                         <button class="layerBtn" data-layer="chocolate"><img src="./images/layer_chocolate.svg" alt="Chocolate Layer"  width="70px" height="70px"></button>
+                         <button class="layerBtn" data-layer="matcha"><img src="./images/layer_matcha.svg" alt="Matcha Layer"           width="70px" height="70px"></button>
+                    </div>
                 </div>
                 <div>
                     <p>Cream</p>
-                    <div></div>
+                    <div>
+                        <!-- 3 cream thumbnails/buttons go here -->
+                       <button class="creamBtn" data-cream="white"><img src="./images/cream_white.svg" alt="White Cream"                width="70px" height="70px"></button>
+                       <button class="creamBtn" data-cream="chocolate"><img src="./images/cream_chocolate.svg" alt="Chocolate Cream"    width="70px" height="70px"></button>
+                       <button class="creamBtn" data-cream="matcha"><img src="./images/cream_matcha.svg" alt="Matcha Cream"             width="70px" height="70px"></button>
+                   </div>
                 </div>
                 <div>
                     <p>Topping</p>
-                    <div></div>
+                    <div>
+                        <!-- 3 topping thumbnails/buttons go here -->
+                        <button class="toppingBtn" data-topping="berries"><img src="./images/Berries-thumbnail.svg" alt="Berries"       width="70px" height="70px"></button>
+                        <button class="toppingBtn" data-topping="chocolates"><img src="./images/Choco-thumbnail.svg" alt="Chocolates"   width="70px" height="70px"></button>
+                        <button class="toppingBtn" data-topping="candles"><img src="./images/Candle-thumbnail.svg" alt="Candles"        width="70px" height="70px"></button>
+                    </div>
                 </div>
             </div>
 
@@ -48,6 +63,7 @@
             </div>
             
             <div class="inputFieldContainer">
+                <h2>Input Name here</h2>
                <!-- input name -->
             </div>
        </div>
@@ -55,13 +71,25 @@
        <!-- Display area -->
        <div class="displayArea" id="background">
             <div>
-                <h1>Happy Birthday,</h1>
+                <h1>Happy Birthday, </h1>
             </div>
-            <div class="cake">
-                <!-- testing graphics -->
-                <img id="cream" src="./images/cream_chocolate.svg" >
-                <img id="layer" src="./images/layer_chocolate.svg" >
-            </div>
+            <div class="cake"> 
+                <!-- Layer types appear -->
+                <img class="layerImg" data-layer="vanilla" src="./images/layer_vanilla.svg" style="display: none;">
+                <img class="layerImg" data-layer="chocolate" src="./images/layer_chocolate.svg" style="display: none;">
+                <img class="layerImg" data-layer="matcha" src="./images/layer_matcha.svg" style="display: none;">             
+
+                <!-- Cream types appear -->
+                <img class="creamImg" data-cream="white" src="./images/cream_white.svg" style="display: none;">
+                <img class="creamImg" data-cream="chocolate" src="./images/cream_chocolate.svg" style="display: none;">
+                <img class="creamImg" data-cream="matcha" src="./images/cream_matcha.svg" style="display: none;">
+                
+                <!-- Toppings appear -->
+                <img class="toppingImg" data-topping="berries" src="./images/berries.svg" style="display: none;">
+                <img class="toppingImg" data-topping="chocolates" src="./images/chocolates.svg" style="display: none;">
+                <img class="toppingImg" data-topping="candles" src="./images/candles.svg" style="display: none;">
+            </div>            
+
        </div>
     </main>
     <script src="./script/cake.js"></script>
