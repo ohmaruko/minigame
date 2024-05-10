@@ -27,36 +27,46 @@
             <div>
                 <h1>Make your Own Cake!</h1>
             </div>
+            
             <div class="customizeContainer">
                 <h2>Choose your: </h2>
                 <div>
                     <p>Layer</p>
                     <div>
                         <!-- 3 layer thumbnails/buttons go here -->
-                         <button class="layerBtn" data-layer="vanilla"><img src="./images/layer_vanilla.svg" alt="Vanilla Layer"        width="70px" height="70px"></button>
-                         <button class="layerBtn" data-layer="chocolate"><img src="./images/layer_chocolate.svg" alt="Chocolate Layer"  width="70px" height="70px"></button>
-                         <button class="layerBtn" data-layer="matcha"><img src="./images/layer_matcha.svg" alt="Matcha Layer"           width="70px" height="70px"></button>
+                         <button class="layerBtn" data-layer="vanilla" onclick="showElement('layer', 'vanilla')"><img src="./images/layer_vanilla.svg" alt="Vanilla Layer"        width="70px" height="70px"></button>
+                         <button class="layerBtn" data-layer="chocolate" onclick="showElement('layer', 'chocolate')"><img src="./images/layer_chocolate.svg" alt="Chocolate Layer"  width="70px" height="70px"></button>
+                         <button class="layerBtn" data-layer="matcha" onclick="showElement('layer', 'matcha')"><img src="./images/layer_matcha.svg" alt="Matcha Layer"           width="70px" height="70px"></button>
                     </div>
                 </div>
                 <div>
                     <p>Cream</p>
                     <div>
                         <!-- 3 cream thumbnails/buttons go here -->
-                       <button class="creamBtn" data-cream="white"><img src="./images/cream_white.svg" alt="White Cream"                width="70px" height="70px"></button>
-                       <button class="creamBtn" data-cream="chocolate"><img src="./images/cream_chocolate.svg" alt="Chocolate Cream"    width="70px" height="70px"></button>
-                       <button class="creamBtn" data-cream="matcha"><img src="./images/cream_matcha.svg" alt="Matcha Cream"             width="70px" height="70px"></button>
+                       <button class="creamBtn" data-cream="white" onclick="showElement('cream', 'white')"><img src="./images/cream_white.svg" alt="White Cream"                width="70px" height="70px"></button>
+                       <button class="creamBtn" data-cream="chocolate" onclick="showElement('cream', 'chocolate')"><img src="./images/cream_chocolate.svg" alt="Chocolate Cream"    width="70px" height="70px"></button>
+                       <button class="creamBtn" data-cream="matcha" onclick="showElement('cream', 'matcha')"><img src="./images/cream_matcha.svg" alt="Matcha Cream"             width="70px" height="70px"></button>
                    </div>
                 </div>
                 <div>
                     <p>Topping</p>
                     <div>
                         <!-- 3 topping thumbnails/buttons go here -->
-                        <button class="toppingBtn" data-topping="berries"><img src="./images/Berries-thumbnail.svg" alt="Berries"       width="70px" height="70px"></button>
-                        <button class="toppingBtn" data-topping="chocolates"><img src="./images/Choco-thumbnail.svg" alt="Chocolates"   width="70px" height="70px"></button>
-                        <button class="toppingBtn" data-topping="candles"><img src="./images/Candle-thumbnail.svg" alt="Candles"        width="70px" height="70px"></button>
+                        <button class="toppingBtn" data-topping="berries" onclick="toggleToppingDisplay('berries')">
+                            <img src="./images/Berries-thumbnail.svg" alt="Berries" width="70px" height="70px">
+                        </button>
+                        <button class="toppingBtn" data-topping="chocolates" onclick="toggleToppingDisplay('chocolates')">
+                            <img src="./images/Choco-thumbnail.svg" alt="Chocolates" width="70px" height="70px">
+                        </button>
+                        <button class="toppingBtn" data-topping="candles" onclick="toggleToppingDisplay('candles')">
+                            <img src="./images/Candle-thumbnail.svg" alt="Candles" width="70px" height="70px">
+                        </button>
+                        
                     </div>
                 </div>
-            </div>
+
+            </div> 
+
 
             <div class="backgroundButtonContainer">
                 <button id="bgbtn">Change Background</button>
@@ -73,25 +83,63 @@
             <div>
                 <h1>Happy Birthday, </h1>
             </div>
-            <div class="cake"> 
+            
+            <div class="cake-container"> 
                 <!-- Layer types appear -->
-                <img class="layerImg" data-layer="vanilla" src="./images/layer_vanilla.svg" style="display: none;">
-                <img class="layerImg" data-layer="chocolate" src="./images/layer_chocolate.svg" style="display: none;">
-                <img class="layerImg" data-layer="matcha" src="./images/layer_matcha.svg" style="display: none;">             
+                <img class="layerImg" id="layer-vanilla" src="./images/layer_vanilla.svg" style="display: none;">
+                <img class="layerImg" id="layer-chocolate" src="./images/layer_chocolate.svg" style="display: none;">
+                <img class="layerImg" id="layer-matcha" src="./images/layer_matcha.svg" style="display: none;">             
 
                 <!-- Cream types appear -->
-                <img class="creamImg" data-cream="white" src="./images/cream_white.svg" style="display: none;">
-                <img class="creamImg" data-cream="chocolate" src="./images/cream_chocolate.svg" style="display: none;">
-                <img class="creamImg" data-cream="matcha" src="./images/cream_matcha.svg" style="display: none;">
+                <img class="creamImg" id="cream-white" src="./images/cream_white.svg" style="display: none;">
+                <img class="creamImg" id="cream-chocolate" src="./images/cream_chocolate.svg" style="display: none;">
+                <img class="creamImg" id="cream-matcha" src="./images/cream_matcha.svg" style="display: none;">
                 
                 <!-- Toppings appear -->
-                <img class="toppingImg" data-topping="berries" src="./images/berries.svg" style="display: none;">
-                <img class="toppingImg" data-topping="chocolates" src="./images/chocolates.svg" style="display: none;">
-                <img class="toppingImg" data-topping="candles" src="./images/candles.svg" style="display: none;">
-            </div>            
+                <img class="toppingImg" id="topping-berries" src="./images/berries.svg" style="display: none;">
+                <img class="toppingImg" id="topping-chocolates" src="./images/chocolates.svg" style="display: none;">
+                <img class="toppingImg" id="topping-candles" src="./images/candles.svg" style="display: none;">
+            </div>       
 
        </div>
     </main>
+
+    <script>
+
+function showElement(type, name) {
+
+        const elementToShow = document.querySelector(`#${type}-${name}`);
+        
+        // Toggle the display state of the clicked element
+        if (elementToShow.style.display === 'none') {
+            elementToShow.style.display = 'block';
+        } else {
+            elementToShow.style.display = 'none';
+        }
+        
+        // Show the clicked element and hide all others
+        const elements = document.querySelectorAll(`.${type}Img`);
+        elements.forEach(element => {
+            if (element.id === `${type}-${name}`) {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        });
+
+    }
+
+
+function toggleToppingDisplay(name) {
+    const topping = document.querySelector(`#topping-${name}`);
+    if (topping) {
+        topping.style.display = topping.style.display === 'none' ? 'block' : 'none';
+    }
+}
+
+
+    </script>
+
     <script src="./script/cake.js"></script>
     <script src="./script/site.js"></script>
 </body>
