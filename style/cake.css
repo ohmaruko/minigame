@@ -16,7 +16,7 @@ body {
 }
 
 .back svg {
-    fill: #D19E61
+    fill: #D19E61;
 }
 
 .back:hover {
@@ -24,7 +24,7 @@ body {
 }
 
 .back svg:hover {
-    fill: #F5F1CC
+    fill: #F5F1CC;
 }
 
 .back:active {
@@ -155,4 +155,17 @@ h2 {
     transform: translateX(-50%) translateY(-50%);
 }
 
+.nameH1 {
+    text-align: center;
+    font-size: 60px;
+}
 
+#inputName {
+    border-color: #D19E61;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: #F5F1CC;
+    width: 180px;
+    height: 35px;
+    margin-top: -7%;
+}

@@ -75,13 +75,16 @@
             <div class="inputFieldContainer">
                 <h2>Input Name here</h2>
                <!-- input name -->
+                <input type="text" id="inputName" placeholder="  Enter your name" oninput="changeDisplayName()">
+                
             </div>
        </div>
 
        <!-- Display area -->
        <div class="displayArea" id="background">
             <div>
-                <h1>Happy Birthday, </h1>
+                <h1>Happy Birthday, <span class="nameH1" id="displayName"></span>!</h1>
+                
             </div>
             
             <div class="cake-container"> 
@@ -136,6 +139,13 @@ function toggleToppingDisplay(name) {
         topping.style.display = topping.style.display === 'none' ? 'block' : 'none';
     }
 }
+
+function changeDisplayName() {
+    const newName = document.getElementById('inputName').value;
+    const displayName = document.getElementById('displayName');
+    displayName.textContent = newName;
+}
+
 
 
     </script>

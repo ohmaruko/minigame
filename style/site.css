@@ -58,4 +58,22 @@ h1{
     height: 30px;
     z-index: 1000;
   }
+
+  .cake {
+    position: relative;
+    right: 2.5rem;
+    top: 5rem;
+  }
+
+  .cream {
+    position: absolute;
+    right: 5.25rem;
+    bottom: 10rem;
+  }
+
+  .topping {
+    position: absolute;
+    right: 11.5rem;
+    bottom: 21.5rem;
+  }
   
